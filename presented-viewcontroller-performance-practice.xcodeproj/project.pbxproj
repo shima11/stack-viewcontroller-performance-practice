@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,7 +56,6 @@
 				56C22374A302BD25A6DE233A /* Pods-presented-viewcontroller-performance-practice.debug.xcconfig */,
 				1EA3861087BED1F1B9D11125 /* Pods-presented-viewcontroller-performance-practice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
