@@ -1,0 +1,6 @@
+framework module Pods_presented_viewcontroller_performance_practice {
+  umbrella header "Pods-presented-viewcontroller-performance-practice-umbrella.h"
+
+  export *
+  module * { export * }
+}

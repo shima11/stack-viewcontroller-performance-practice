@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11D720470EF49C7A67E94CF2 /* Pods_presented_viewcontroller_performance_practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B875AE1D50ED2AFA195762 /* Pods_presented_viewcontroller_performance_practice.framework */; };
 		D4593918253220B40019A6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4593917253220B40019A6CA /* AppDelegate.swift */; };
 		D459391A253220B40019A6CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4593919253220B40019A6CA /* SceneDelegate.swift */; };
 		D459391C253220B40019A6CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D459391B253220B40019A6CA /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EA3861087BED1F1B9D11125 /* Pods-presented-viewcontroller-performance-practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-presented-viewcontroller-performance-practice.release.xcconfig"; path = "Target Support Files/Pods-presented-viewcontroller-performance-practice/Pods-presented-viewcontroller-performance-practice.release.xcconfig"; sourceTree = "<group>"; };
+		49B875AE1D50ED2AFA195762 /* Pods_presented_viewcontroller_performance_practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_presented_viewcontroller_performance_practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56C22374A302BD25A6DE233A /* Pods-presented-viewcontroller-performance-practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-presented-viewcontroller-performance-practice.debug.xcconfig"; path = "Target Support Files/Pods-presented-viewcontroller-performance-practice/Pods-presented-viewcontroller-performance-practice.debug.xcconfig"; sourceTree = "<group>"; };
 		D4593914253220B40019A6CA /* presented-viewcontroller-performance-practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "presented-viewcontroller-performance-practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4593917253220B40019A6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4593919253220B40019A6CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D720470EF49C7A67E94CF2 /* Pods_presented_viewcontroller_performance_practice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08D6458DA4C66C60AC0050D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49B875AE1D50ED2AFA195762 /* Pods_presented_viewcontroller_performance_practice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDF83DAB55E8879EAAA82F10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56C22374A302BD25A6DE233A /* Pods-presented-viewcontroller-performance-practice.debug.xcconfig */,
+				1EA3861087BED1F1B9D11125 /* Pods-presented-viewcontroller-performance-practice.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D459390B253220B40019A6CA = {
 			isa = PBXGroup;
 			children = (
 				D4593916253220B40019A6CA /* presented-viewcontroller-performance-practice */,
 				D4593915253220B40019A6CA /* Products */,
+				CDF83DAB55E8879EAAA82F10 /* Pods */,
+				08D6458DA4C66C60AC0050D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4593928253220B60019A6CA /* Build configuration list for PBXNativeTarget "presented-viewcontroller-performance-practice" */;
 			buildPhases = (
+				34E77AE2622DDC9D496C6598 /* [CP] Check Pods Manifest.lock */,
 				D4593910253220B40019A6CA /* Sources */,
 				D4593911253220B40019A6CA /* Frameworks */,
 				D4593912253220B40019A6CA /* Resources */,
+				9CFB1B4DCC37F21AE8C43254 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34E77AE2622DDC9D496C6598 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-presented-viewcontroller-performance-practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CFB1B4DCC37F21AE8C43254 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-presented-viewcontroller-performance-practice/Pods-presented-viewcontroller-performance-practice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-presented-viewcontroller-performance-practice/Pods-presented-viewcontroller-performance-practice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-presented-viewcontroller-performance-practice/Pods-presented-viewcontroller-performance-practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4593910253220B40019A6CA /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		D4593929253220B60019A6CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56C22374A302BD25A6DE233A /* Pods-presented-viewcontroller-performance-practice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +371,7 @@
 		};
 		D459392A253220B60019A6CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EA3861087BED1F1B9D11125 /* Pods-presented-viewcontroller-performance-practice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
