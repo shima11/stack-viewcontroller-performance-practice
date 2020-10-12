@@ -72,7 +72,8 @@ class PresentedViewController: UIViewController {
 
     view.backgroundColor = .white
 
-    let image = images.randomElement()
+    let image = UIImage(data: try! Data(contentsOf: URL(string: "https://images.unsplash.com/photo-1602371995644-0309957b30cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2715&q=80")!))
+//    let image = images.randomElement()
     let imageView1 = UIImageView(image: image)
     imageView1.frame = view.bounds
 
@@ -139,7 +140,8 @@ class PushedViewController: UIViewController {
 
     view.backgroundColor = .white
 
-    let image = images.randomElement()
+//    let image = images.randomElement()
+    let image = UIImage(data: try! Data(contentsOf: URL(string: "https://images.unsplash.com/photo-1602371995644-0309957b30cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2715&q=80")!))
     let imageView1 = UIImageView(image: image)
     imageView1.frame = view.bounds
 
