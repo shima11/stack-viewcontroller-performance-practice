@@ -14,7 +14,9 @@ class ViewController: UIViewController {
 
     let action1 = UIAction { [unowned self] (action) in
       let controller = PresentedViewController()
+      // selfに対してでもself.navigationControllerに対してでもpresentすればpresentingViewControllerは同じになる
       self.present(controller, animated: true, completion: nil)
+//      self.navigationController?.present(controller, animated: true, completion: nil)
     }
 
     let action2 = UIAction { [unowned self] (action) in
@@ -60,6 +62,7 @@ class PresentedViewController: UIViewController {
   init() {
     super.init(nibName: nil, bundle: nil)
     modalPresentationStyle = .currentContext
+//    modalPresentationStyle = .fullScreen
 
   }
 
@@ -131,6 +134,17 @@ class PresentedViewController: UIViewController {
 
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+
+    print(
+      "presented viewcontroller:",
+      presentingViewController,
+      presentationController,
+      presentedViewController
+    )
+  }
+
 }
 
 class PushedViewController: UIViewController {
@@ -196,6 +210,17 @@ class PushedViewController: UIViewController {
 
     view.addSubview(button2)
 
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+
+    print(
+      "pushed viewcontroller:",
+      presentingViewController,
+      presentationController,
+      presentedViewController
+    )
   }
 
 }

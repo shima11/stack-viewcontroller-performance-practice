@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-presented-viewcontroller-performance-practice/Pods-presented-viewcontroller-performance-practice-frameworks.sh
-${PODS_ROOT}/Reveal-SDK/RevealServer/iOS/RevealServer.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/RevealServer/RevealServer.framework/RevealServer
